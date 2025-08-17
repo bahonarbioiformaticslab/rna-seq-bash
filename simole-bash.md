@@ -6,3 +6,4 @@ echo "Today is $(date)"
 chmod +x greet.sh
 #Run the script:
 ./greet.sh
+#havefun
