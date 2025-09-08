@@ -1,0 +1,6 @@
+while true; do echo "time is - $(date +"%T")";ls -l; sleep 100; done
+
+du -h --max-depth=1 | sort -h
+
+
+

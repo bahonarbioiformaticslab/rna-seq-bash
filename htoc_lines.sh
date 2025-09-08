@@ -3,7 +3,8 @@ set -euo pipefail
 
 # === CONFIGURATION ===
 THREADS=8
-REFERENCE_INDEX="/media/bbl/201da159-b034-465f-9ef6-6e4f133a16b3/sratoolkit.3.0.7-ubuntu64/bin/MOHSENIDATA/DB"
+REFERENCE_INDEX="/media/bbl/201da159-b034-465f-9ef6-6e4f133a16b3/sratoolkit.3.0.7-ubuntu64/bin/MOHSENIDATA/DB
+/sol_index"
 GTF="GCA_000188115.5_SL4.0_genomic.gbff"
 OUTDIR='out'
 
@@ -25,6 +26,9 @@ SRR9879605
 
 
 
+
+
+
 # === 2. Loop over SRR IDs ===
 for SRR in "${SRR_IDS[@]}"; do
     echo "=== Processing $SRR ==="
@@ -33,7 +37,7 @@ for SRR in "${SRR_IDS[@]}"; do
     SAM="$OUTDIR/${SRR}.sam"
     BAM="$OUTDIR/${SRR}.bam"
     SORTED_BAM="$OUTDIR/${SRR}.sorted.bam"
-    COUNT="$OUTDIR/count.${SRR}.txt"
+    COUNT="$OUTDIR/${SRR}.count"
 
     if [ ! -f "$FASTQ" ]; then
         echo "❌ FASTQ file $FASTQ not found! Skipping $SRR..."
